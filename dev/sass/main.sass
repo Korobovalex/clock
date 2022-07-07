@@ -1,2 +1,126 @@
+// Fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap')
+
+*
+    margin: 0
+    padding: 0
+    font-family: 'Poppins', sans-serif
+    box-sizing: border-box
+
+
 body
-  background-color: navy
+    display: flex
+    justify-content: center
+    align-items: center
+
+    min-height: 100vh
+
+    background-color: #2f363e
+
+.container
+    position: relative
+
+    display: flex
+    justify-content: center
+    align-items: center
+    //min-height: 500px
+
+    border-radius: 20px
+    border-top-left-radius: 225px
+    border-top-right-radius: 225px
+
+    background-color: #2f363e
+    box-shadow: 25px 25px 75px rgba(0, 0, 0, .75), 10px 10px 70px rgba(0, 0, 0, .25), inset 5px 5px 10px rgba(0, 0, 0, .5), inset 5px 5px 20px rgba(0, 0, 0, .2), inset -5px -5px 15px rgba(0, 0, 0, .75)
+
+.clock
+    position: relative
+
+    display: flex
+    justify-content: center
+    align-items: center
+
+    width: 450px
+    height: 450px
+    margin-bottom: 30px
+    border-radius: 50%
+
+    background-color: #2f363e
+    box-shadow: 10px 50px 70px rgba(0, 0, 0, .25), inset 5px 5px 10px rgba(0, 0, 0, .5), inset 5px 5px 20px rgba(0, 0, 0, .2), inset -5px -5px 15px rgba(0, 0, 0, .75)
+
+    &:before
+        content: ''
+        position: absolute
+
+        width: 8px
+        height: 8px
+
+        background-color: #2f363e
+        border: 3px solid #fff
+        border-radius: 50%
+
+    span
+        position: absolute
+
+        inset: 20px
+        color: #fff
+        text-align: center
+        transform: rotate(calc(30deg * var(--i)))
+
+        b
+            display: inline-block
+            font-size: 2em
+            opacity: .25
+            font-weight: 600
+            transform: rotate(calc(-30deg * var(--i)))
+
+    .circle
+        position: absolute
+
+        display: flex
+        justify-content: center
+        align-items: flex-start
+
+        width: 300px
+        height: 300px
+        border: 2px solid rgba(0, 0, 0, .25)
+        border-radius: 50%
+        z-index: 10
+
+        i
+            position: absolute
+            width: 6px
+            height: 50%
+            transform-origin: bottom
+            transform: scaleY(.5)
+            background-color: var(--clr)
+            opacity: .75
+        &:nth-child(1) i
+            width: 2px
+
+        &:nth-child(2) i
+            width: 6px
+
+        &::before
+            content: ''
+            position: absolute
+            top: -8.5px
+
+            width: 15px
+            height: 15px
+            border-radius: 50%
+
+            background-color: var(--clr)
+            box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr)
+
+    .circle2
+        width: 240px
+        height: 240px
+        z-index: 9
+
+    .circle3
+        width: 180px
+        height: 180px
+        z-index: 8
+
+
